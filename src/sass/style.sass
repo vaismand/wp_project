@@ -9,16 +9,24 @@ header
         margin: 0 
         display: flex
         justify-content: space-between
+        padding-left: 0
         ul 
             display: flex
             list-style: none
             padding-left: 0
             li 
-                margin-right: 40px
+                padding-right: 22px
+                margin-right: 22px
                 margin-top: 22px
                 color: #ffffff
                 font-size: 15px
                 font-weight: 300
+                border-right: solid 1px #ffffff34
+                &:nth-child(4)
+                    border-right: none
+                    margin-right: 0
+                    padding-right: 0
+                    
         button 
             width: 153px
             height: 38px
@@ -31,16 +39,18 @@ header
             line-height: 24px
             text-transform: uppercase
 .main
-    padding: 15px 10px 15px 10px
     &_about
         display: flex
         justify-content: space-between
+        padding: 15px 0px
         &_links
             display: flex
             .logo
                 margin-right: 44px
             a 
                 display: flex
+                margin-top: 12px
+                margin-right: 33px
                 text-decoration: none
                 color: #323232
                 font-size: 15px
@@ -50,6 +60,10 @@ header
                 img 
                     width: 37px
                     height: 37px
+                    margin-right: 12px
+                p 
+                    margin-top: 8px
+
         button 
             width: 153px
             height: 42px
@@ -60,3 +74,99 @@ header
             font-weight: 400
             line-height: 24px
             text-transform: uppercase
+    &_events
+        min-height: 440px
+        background: url("../img/bg1.png") center center/cover no-repeat
+        .container
+            display: flex
+            justify-content: flex-end
+        &_list
+            position: relative
+            width: 467px
+            height: 179px
+            margin-top: 123px
+            .slick-prev
+                position: absolute
+                top: 37%
+                left: -10%
+            .slick-next
+                position: absolute
+                top: 37%
+                right: -1%
+            &_item
+                display: flex
+                padding: 25px 31px
+                background: url("../img/back.png") center center/cover no-repeat
+                width: 427px
+                height: 179px
+                .date
+                    padding: 26px 12px
+                    width: 105px
+                    height: 128px
+                    margin-right: 20px
+                    border: 1px solid #c99c47
+                    background-color: #ffffff
+                    color: #c99c47
+                    font-size: 29px
+                    font-weight: 400
+                    line-height: 20px
+                    text-transform: uppercase  
+                    text-align: center 
+                    span 
+                        color: #c99c47
+                        font-size: 18px
+                        font-weight: 400
+                        line-height: 22.19px
+                        text-transform: uppercase
+                .text
+                    &_title
+                        color: #c99c47
+                        font-size: 14px
+                        font-weight: 500
+                        text-transform: uppercase
+                    &_descr
+                        color: #323232
+                        font-size: 13px
+                        font-weight: 300
+                        line-height: 17.97px
+                        span
+                            color: #757575
+                            font-size: 14px
+                            font-weight: 300
+.about
+    padding: 66px 0 49px 0
+    &_descr
+        color: #323232
+        font-family: Roboto
+        font-size: 17px
+        font-weight: 300
+        line-height: 30px
+        text-align: justify
+    &_list
+        display: flex
+        justify-content: space-between
+        margin-top: 58px
+        &_item
+            max-width: 360px
+            text-align: center
+            img 
+                display: block
+                margin: 0 auto
+                margin-bottom: 27px
+            &_title
+                color: #323232
+                font-size: 17px
+                font-weight: 500
+                line-height: 24px
+                margin-bottom: 22px
+            &_descr
+                color: #323232
+                font-size: 15px
+                font-weight: 300
+                line-height: 24px
+                margin-bottom: 23px
+            &_button
+                width: 120px
+                height: 38px
+                background-color: #d4c198
+                border: none
