@@ -1,7 +1,12 @@
 *
     font-family: Roboto, sans-serif
 
-
+.title
+    color: #323232
+    font-size: 24px
+    font-weight: 500
+    text-transform: uppercase
+    text-align: center
 header
     height: 56px
     background-color: #323232
@@ -170,3 +175,67 @@ header
                 height: 38px
                 background-color: #d4c198
                 border: none
+    &_buttons
+        display: flex
+        justify-content: center
+        margin-top: 39px
+        button 
+            width: 153px
+            height: 42px
+            border: none
+            margin: 0 7px
+            background-color: #c99c47
+            color: #ffffff
+            font-size: 13px
+            font-weight: 400
+            line-height: 24px
+            text-transform: uppercase
+        .subscribe
+            background-color: #323232
+.reviews
+    background-color: #e8d8b6c7
+    padding: 54px 0 61px 0
+    &_slider
+        display: flex
+        .slick-prev
+            position: absolute
+            top: 37%
+            left: -4%
+        .slick-next
+            position: absolute
+            top: 37%
+            right: -4%
+        &_item
+            display: flex
+            img 
+                width: 121px
+                height: 121px
+                margin-right: 14px
+            &_blog
+                padding: 26px 27px 31px 50px
+                width: 411px
+                height: 245px
+                background: url("../img/back2.png") center center/cover no-repeat
+                .slider_title
+                    color: #323232
+                    font-size: 17px
+                    font-weight: 500
+                    margin-bottom: 11px
+                .slider_date
+                    width: 119px
+                    height: 29px
+                    margin-bottom: 11px
+                    background-color: #818181ad
+                    color: #ffffff
+                    font-family: Roboto
+                    font-size: 9px
+                    font-weight: 300
+                    line-height: 28px
+                    text-transform: uppercase
+                    text-align: center
+                .slider_text
+                    color: #323232
+                    font-size: 14px
+                    font-weight: 300
+                    line-height: 22px
+
