@@ -78,8 +78,8 @@ $(document).ready(function(){
         arrows: true,
         infinite: true,
         speed: 700,
-        slidesToShow: 6,
-        slidesToScroll: 2,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         prevArrow: '<div class="slick-prev"><img src="../icons/left2.png"></div>',
         nextArrow: '<div class="slick-next"><img src="../icons/right2.png"></div>',
         responsive: [

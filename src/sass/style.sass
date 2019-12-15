@@ -7,6 +7,16 @@
     font-weight: 500
     text-transform: uppercase
     text-align: center
+.footer_title
+    color: #c99c47
+    font-weight: 400
+    font-size: 14px
+    margin-bottom: 20px
+.footer_text
+    color: #ffffff
+    font-size: 14px
+    font-weight: 300
+    line-height: 36px
 header
     height: 56px
     background-color: #323232
@@ -248,6 +258,7 @@ header
     background-color: #e8d8b698
     padding: 44px 0 60px 0
     &_slide
+        margin-top: 33px
         .slick-prev
             position: absolute
             top: 37%
@@ -256,7 +267,51 @@ header
             position: absolute
             top: 37%
             right: -4%
-        img 
+        &_img
             display: block
             margin: 0 auto
+            width: 180px
+            height: 123px
+.footer
+    background-color: #323232
+    padding: 48px 0 43px 0
+    hr
+        height: 1px
+        background-color: #ffffff18
+        border: none
+    &_top
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        &_list
+            display: flex
+            margin-bottom: 20px
+            &_forum
+                padding-right: 59px
+                border-right: solid 1px #ffffff18
+            &_contact
+                margin-left: 45px
+
+    &_bottom
+        display: flex
+        justify-content: space-between
+        &_develop
+            display: flex
+            .develop_text
+                opacity: 0.3
+                color: #ffffff
+                font-size: 13px
+                font-weight: 300
+                line-height: 17px
+                margin-top: 37px
+            img 
+                width: 94px
+                height: 30px
+                opacity: 0.5
+                margin-top: 27px
+        .footer_text
+            margin-top: 37px
+
+     
+
 
