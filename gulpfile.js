@@ -6,6 +6,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const minify = require('gulp-minify');
+const concat = require('gulp-concat');
 
 gulp.task('server', function() {
 
@@ -60,4 +62,16 @@ gulp.task('images', function() {
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('compress', function() {
+    gulp.src(['src/js/**/*.js'])
+      .pipe(minify())
+      .pipe(gulp.dest('src/js'));
+});
+
+gulp.task('concat', function() {
+    gulp.src(['src/js/**/*.min.js'])
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'compress', 'concat'));
