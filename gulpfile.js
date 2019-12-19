@@ -6,8 +6,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
-const minify = require('gulp-minify');
 const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+
 
 gulp.task('server', function() {
 
@@ -41,11 +42,6 @@ gulp.task('html', function() {
     .pipe(gulp.dest("dist/"));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src("src/js/**/*.js")
-    .pipe(gulp.dest("dist/js"));
-});
-
 gulp.task('fonts', function() {
     return gulp.src("src/fonts/**/*")
     .pipe(gulp.dest("dist/fonts"));
@@ -62,16 +58,13 @@ gulp.task('images', function() {
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('compress', function() {
-    gulp.src(['src/js/**/*.js'])
-      .pipe(minify())
-      .pipe(gulp.dest('src/js'));
-});
-
 gulp.task('concat', function() {
-    gulp.src(['src/js/**/*.min.js'])
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest('dist/js'));
+    return gulp.src(['src/js/jquary.min.js', 'src/js/slick.min.js', 'src/js/script.js'])
+      .pipe(concat({ path: 'main.js', stat: { mode: 0666 }}))
+      .pipe(gulp.dest('dist/js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'compress', 'concat'));
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'fonts', 'icons', 'html', 'images', 'concat'));
